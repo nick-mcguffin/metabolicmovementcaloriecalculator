@@ -53,8 +53,10 @@ public class UserLoginPanel extends JPanel implements ActionListener {
                  "Login Information: "));
         
         username = new JLabel("Username: ");
+        username.setToolTipText("Enter your username.");
         usernameField = new JTextField(20);
         password = new JLabel("Password: ");
+        password.setToolTipText("Enter your password.");
         passwordField = new JPasswordField(20);
         
         userLoginPanel.add(username);
@@ -84,7 +86,7 @@ public class UserLoginPanel extends JPanel implements ActionListener {
         userLoginButtonPanel.add(newUserButton);
         userLoginButtonPanel.add(recoverAccountButton);
        
-        outputArea = new JTextArea(23, 45);
+        outputArea = new JTextArea(23, 40);
         
         outputPanel = new JPanel();
         outputPanel.setBorder(BorderFactory.createTitledBorder("Results"));
