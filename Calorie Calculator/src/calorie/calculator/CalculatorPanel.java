@@ -98,19 +98,19 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         
       
         firstName = new JLabel("First Name: ");
-        firstName.setToolTipText("Enter your first name.");
+        
         
         lastName = new JLabel("Last Name: ");
-        lastName.setToolTipText("Enter your last name.");
+        
         
         weight = new JLabel("Enter Weight (kg): ");
-        weight.setToolTipText("Enter your weight in kilograms.");
+        
         
         height = new JLabel("Enter Height (cm): ");
-        height.setToolTipText("Enter your height in centimetres.");
+        
         
         age = new JLabel("Enter age: ");
-        age.setToolTipText("Enter your age in years.");
+        
         
         firstNameField = new JTextField(20);
         lastNameField = new JTextField(20);
