@@ -98,10 +98,20 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         
       
         firstName = new JLabel("First Name: ");
+        firstName.setToolTipText("Enter your first name.");
+        
         lastName = new JLabel("Last Name: ");
+        lastName.setToolTipText("Enter your last name.");
+        
         weight = new JLabel("Enter Weight (kg): ");
+        weight.setToolTipText("Enter your weight in kilograms.");
+        
         height = new JLabel("Enter Height (cm): ");
+        height.setToolTipText("Enter your height in centimetres.");
+        
         age = new JLabel("Enter age: ");
+        age.setToolTipText("Enter your age in years.");
+        
         firstNameField = new JTextField(20);
         lastNameField = new JTextField(20);
         heightField = new JTextField(3);
@@ -112,7 +122,6 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         secondCalculatorPanel.add(firstNameField);
         secondCalculatorPanel.add(lastName);
         secondCalculatorPanel.add(lastNameField);
-        
         secondCalculatorPanel.add(weight);
         secondCalculatorPanel.add(weightField);
         secondCalculatorPanel.add(height);
@@ -123,9 +132,10 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         
         
         //button panel setup
+        
         calculateButton = new JButton("Calculate");
         clearButton = new JButton("Clear");
-        
+      
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(1, 2, 100, 40));
         buttonPanel.add(calculateButton);
@@ -136,7 +146,7 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         
 
         //output panel setup
-        outputArea = new JTextArea(16, 45);
+        outputArea = new JTextArea(16, 40);
         
         outputPanel = new JPanel();
         outputPanel.setBorder(BorderFactory.createTitledBorder("Results"));
@@ -212,7 +222,7 @@ public class CalculatorPanel extends JPanel implements ActionListener{
         
         finalAdjustedCalories = dailyCalorieCalculation((String)this.clientGoals.getSelectedItem(), activityAdjustedCalories);
         
-        outputArea.append("Your calorie intake adjusted to your fitness goals should be \n" + df.format(finalAdjustedCalories) + " calories per day.");
+        outputArea.append("Your calorie intake adjusted to your fitness goals should be " + df.format(finalAdjustedCalories) + " calories per day.");
     }
     
     
